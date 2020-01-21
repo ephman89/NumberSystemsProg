@@ -15,7 +15,10 @@ function ConversionPart1() {
 
       var out = "";
 
-
+      while (c != 0) {
+        out = assignChar(c % UnsignedIntBaseTo) + out;
+        c = Math.trunc(c / UnsignedIntBaseTo);
+      }
 
 
       // Show the output on the screen
@@ -65,5 +68,31 @@ function parseChar(thing) {
   }
 }
 
+function assignChar(thing) {
+  switch (thing) {
+    case 10:
+        return "A";
+      break;
+    case 11:
+        return "B";
+      break;
+    case 12:
+        return "C";
+      break;
+    case 13:
+        return "D";
+      break;
+    case 14:
+        return "E";
+      break;
+    case 15:
+        return "F";
+      break;
+    default:
+      return "" + thing;
+      break;
+
+  }
+}
 
     }
